@@ -10,7 +10,7 @@ export interface UseStickyColumnsOptions {
 }
 
 const useStickyColumns = (
-  tableRef: RefObject<HTMLTableElement>,
+  tableRef: RefObject<HTMLTableElement | null>,
   {
     numLeftSticky = 2,
     numRightSticky = 2,
@@ -43,7 +43,6 @@ const useStickyColumns = (
             el.style.left = `${leftOffset}px`;
             el.style.zIndex = `${stickyZIndex}`;
             el.style.boxShadow = i === numLeftSticky - 1 ? leftShadow : "none";
-            el.style.background = "white"; // Optional: helps with overlapping
           });
 
           leftOffset += width;
@@ -66,7 +65,6 @@ const useStickyColumns = (
             el.style.right = `${rightOffset - width}px`;
             el.style.zIndex = `${stickyZIndex}`;
             el.style.boxShadow = i === numRightSticky - 1 ? rightShadow : "none";
-            el.style.background = "white";
           });
         }
       }
