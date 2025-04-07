@@ -1,6 +1,6 @@
 {
   "name": "use-sticky-columns",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "A lightweight React hook to make table columns sticky on both left and right sides.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

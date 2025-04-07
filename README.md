@@ -31,6 +31,17 @@ useStickyColumns(tableRef, { numLeftSticky: 2, numRightSticky: 1 });
 ```
 
 Full example
+```css
+.striped-table {
+  tr:nth-child(odd) td {
+    background-color: white;
+  }
+  tr:nth-child(even) td {
+    background-color: #fafbfc;
+  }
+}
+```
+
 ```typescript
 import ExampleTable from "@/components/examples/ExampleTable";
 import { useRef, useState } from "react";
