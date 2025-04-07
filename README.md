@@ -20,7 +20,7 @@ A lightweight React hook to make HTML table columns sticky on both left and righ
 npm install use-sticky-columns
 ```
 
-## 📦 Usage
+## 🚀 Usage
 
 ```typescript
 import { useRef } from "react";
