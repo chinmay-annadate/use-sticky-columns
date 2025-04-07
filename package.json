@@ -1,0 +1,36 @@
+{
+  "name": "use-sticky-columns",
+  "version": "1.0.0",
+  "description": "A lightweight React hook to make table columns sticky on both left and right sides.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chinmay-annadate/use-sticky-columns.git"
+  },
+  "keywords": [
+    "react",
+    "hook",
+    "sticky",
+    "table",
+    "columns",
+    "sticky-columns",
+    "typescript"
+  ],
+  "author": "Chinmay Annadate",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^17.0.0 || ^18.0.0 || ^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.0",
+    "typescript": "^5.8.0"
+  }
+}
