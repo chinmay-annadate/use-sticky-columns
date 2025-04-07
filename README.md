@@ -24,6 +24,13 @@ npm install use-sticky-columns
 
 ## 🚀 Usage
 Pass tableRef directly to the table element
+
+```typescript
+const tableRef = useRef<HTMLTableElement>(null);
+useStickyColumns(tableRef, { numLeftSticky: 2, numRightSticky: 1 });
+```
+
+Full example
 ```typescript
 import ExampleTable from "@/components/examples/ExampleTable";
 import { useRef, useState } from "react";
