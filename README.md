@@ -7,6 +7,8 @@
 
 A lightweight React hook to make HTML table columns sticky on both left and right sides. Great for data tables and dashboards.
 
+> 🎬 **[Live Demo](https://chinmay.annadate.in/demos/use-sticky-columns)**
+
 ## ✨ Features
 
 - Sticky left and/or right columns
