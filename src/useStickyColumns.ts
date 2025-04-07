@@ -21,9 +21,25 @@ const useStickyColumns = (
   }: UseStickyColumnsOptions = {}
 ) => {
   useEffect(() => {
+    const table = tableRef.current;
+    if (!table) return;
+
+    const cleanupStickyStyles = () => {
+      const allStickyCells = table.querySelectorAll("th, td");
+      allStickyCells.forEach((cell) => {
+        const el = cell as HTMLElement;
+        el.style.position = "";
+        el.style.left = "";
+        el.style.right = "";
+        el.style.zIndex = "";
+        el.style.boxShadow = "";
+      });
+    };
+
     const updateStickyColumns = () => {
-      const table = tableRef.current;
       if (!table) return;
+
+      cleanupStickyStyles(); // Clean before applying new styles
 
       let leftOffset = 0;
       let rightOffset = 0;
@@ -73,7 +89,10 @@ const useStickyColumns = (
     updateStickyColumns();
     window.addEventListener("resize", updateStickyColumns);
 
-    return () => window.removeEventListener("resize", updateStickyColumns);
+    return () => {
+      cleanupStickyStyles();
+      window.removeEventListener("resize", updateStickyColumns);
+    };
   }, [tableRef, numLeftSticky, numRightSticky, stickyZIndex, leftShadow, rightShadow, ...deps]);
 };
 
